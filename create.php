@@ -1,6 +1,6 @@
 
 <?php 
-require_once "../13_curl/index.php";
+// require_once "../13_curl/index.php";
 require_once "functions.php";
 
 $pdo = new PDO('mysql:host=localhost;port=3306;dbname=product_crud','root','');

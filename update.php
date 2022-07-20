@@ -1,6 +1,6 @@
 
 <?php 
-require_once "../13_curl/index.php";
+// require_once "../13_curl/index.php";
 require_once "functions.php";
 
 $pdo = new PDO('mysql:host=localhost;port=3306;dbname=product_crud','root','');
@@ -121,7 +121,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
 
   <div class="mb-3">
     <label>Product Description</label>
-    <textarea class="form-control" name="description" value="<?php echo $description ?>"></textarea>
+    <textarea class="form-control" name="description"><?php echo $description ?></textarea>
   </div>
 
   <div class="mb-3">

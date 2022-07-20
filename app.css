@@ -1,0 +1,13 @@
+body {
+  padding: 50px;
+}
+h1 {
+  color: red;
+}
+
+.thumb-image {
+  width: 50px;
+}
+.update-image {
+  width: 150px;
+}

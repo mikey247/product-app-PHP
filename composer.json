@@ -1,0 +1,15 @@
+{
+    "name": "user/bad",
+    "autoload": {
+        "psr-4": {
+            "User\\Bad\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mikey247",
+            "email": "michaeljunior794@gmail.com"
+        }
+    ],
+    "require": {}
+}

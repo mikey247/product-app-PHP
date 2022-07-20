@@ -1,29 +1,28 @@
 
 <?php 
-echo "Mikey";
-// //require_once "../13_curl/index.php";
+// require_once "../13_curl/index.php";
 
-// $pdo = new PDO('mysql:host=localhost;port=3306;dbname=product_crud','root','');
-// $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$pdo = new PDO('mysql:host=localhost;port=3306;dbname=product_crud','root','');
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// $search = $_GET['search']?? '';
-// // dumper($search);
+$search = $_GET['search']?? '';
+// dumper($search);
 
-// if($search){
-//     $statement = $pdo->prepare('SELECT * FROM products WHERE title LIKE :title ORDER BY create_date DESC');
-//     $statement->bindValue(':title',"$search%");
-// }else{
-//  $statement = $pdo->prepare('SELECT * FROM products ORDER BY create_date DESC');
-// }
+if($search){
+    $statement = $pdo->prepare('SELECT * FROM products WHERE title LIKE :title ORDER BY create_date DESC');
+    $statement->bindValue(':title',"$search%");
+}else{
+ $statement = $pdo->prepare('SELECT * FROM products ORDER BY create_date DESC');
+}
 
-// $statement->execute();
-// $products = $statement->fetchAll(PDO::FETCH_ASSOC);
+$statement->execute();
+$products = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-// // dumper($products)
+// dumper($products)
 
 ?>
 
-<!-- <!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -87,4 +86,4 @@ echo "Mikey";
 
 </body>
 
-</html>   -->
+</html>  
